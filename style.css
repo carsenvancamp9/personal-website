@@ -1,4 +1,5 @@
 :root {
+  /* Ensure responsive viewport for mobile */
   --bg: #fcfcfc;
   --text: #222;
   --accent: #0c8;
@@ -90,16 +91,21 @@ h2 {
   height: 400px;
   z-index: 0;
 }
-# Mobile responsiveness
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .navbar nav {
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .navbar nav a {
     margin: 0.5rem 0;
     font-size: 1rem;
+    text-align: center;
+    word-break: break-word;
+    width: 100%;
   }
 
   .section {
@@ -123,5 +129,92 @@ h2 {
   .section.bio {
     background-size: 150px auto, 150px auto, 150px auto;
     background-position: left top, right center, left bottom;
+  }
+
+  .bio-section,
+  .monkey-entry,
+  .project-entry {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-section img,
+  .monkey-entry img,
+  .project-entry img {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .section.bio img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}/* --- Ultra-small mobile fixes (phones ≤480px) ---------------------------- */
+@media screen and (max-width: 480px) {
+
+  /* 1️⃣  NAVBAR: keep tabs on one row & scrollable */
+  .navbar nav {
+    flex-wrap: nowrap;          /* stay in one horizontal line */
+    overflow-x: auto;           /* allow sideways swipe */
+    gap: 0.5rem;
+  }
+  .navbar nav a {
+    width: auto;                /* shrink to content */
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* 2️⃣  BIO page: remove busy background art on tiny screens */
+  .section.bio {
+    background-image: none;
+    padding-top: calc(var(--nav-height) + 2rem);
+  }
+
+  /* 3️⃣  Stack any flex rows (monkeys, projects, etc.) */
+  .monkey-entry,
+  .project-entry,
+  .bio-section {                /* if you used these classes */
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .monkey-entry img,
+  .project-entry img,
+  .bio-section img,
+  .section img {
+    max-width: 90%;
+    height: auto;
+    margin: 0.75rem 0;
+  }
+
+  /* 4️⃣  Ordered lists: keep numbers on far left, text full-width */
+  ol {
+    list-style-position: inside;
+    padding-left: 0;            /* removes double indent */
+  }
+
+  /* 5️⃣  Tools-logo row: wrap and center icons */
+  #tools div {
+    justify-content: center;
+    gap: 1rem;
+  }
+  #tools img {
+    height: 40px;               /* shrink icons a bit */
+  }
+
+  /* 6️⃣  Footer & social links: center them */
+  footer {
+    padding: 1rem 0;
+    font-size: 0.8rem;
+  }
+  .fixed-social {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
