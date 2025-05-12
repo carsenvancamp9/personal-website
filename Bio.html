@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio - Carsen Van Camp</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- CSS RESET ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ---------- ROOT VARIABLES ---------- */
+    :root {
+      --bg: #fcfcfc;
+      --text: #222;
+      --accent: #0c8;
+      --nav-bg: #ffffffee;
+      --nav-text: #222;
+      --nav-height: 56px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ---------- GLOBAL STYLES ---------- */
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      position: sticky; top: 0; z-index: 100; height: var(--nav-height);
+      background: var(--nav-bg); backdrop-filter: blur(6px);
+      display: flex; align-items: center; padding: 0 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .navbar nav { display: flex; }
+    .navbar nav a {
+      margin-right: 1rem; font-weight: 500; font-size: .9rem;
+      color: var(--nav-text); position: relative; padding-bottom: .25rem;
+    }
+    .navbar nav a::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; background: var(--accent);
+      transition: width .3s ease;
+    }
+    .navbar nav a:hover::after { width: 100%; }
+
+    /* ---------- SECTIONS ---------- */
+    .section {
+      padding: calc(var(--nav-height) + 4rem) 1.25rem 4rem;
+      max-width: 800px; margin: 0 auto; text-align: center;
+    }
+
+    /* Bio page decorative background images */
+    .section.bio {
+      position: relative;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: calc(var(--nav-height) + 2rem) 1.25rem 4rem;
+      background-image:
+        url('Athens.jpeg'),
+        url('Seattle.jpeg'),
+        url('Friends.jpeg'),
+        url('Rowdys.jpeg'),
+        url('Mini Golf.jpeg'),
+        url('Olympia.jpeg');
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: left top, right top, right center, left center, left bottom, right bottom;
+      background-size: 
+        300px auto,  /* Athens */
+        300px auto,  /* Seattle */
+        300px auto,  /* Friends */
+        300px auto,  /* Rowdys */
+        300px auto,  /* Mini Golf */
+        350px auto;  /* Olympia (proportional) */
+    }
+
+    .section h2 { margin-bottom: 1rem; font-size: 2rem; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="navbar">
+    <nav>
+      <a href="index.html#hero">Carsen Van Camp</a>
+      <a href="Bio.html">Bio</a>
+      <a href="Projects.html">Projects</a>
+      <a href="FavoriteKindsofMonkeys.html">Favorite Kinds of Monkeys</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1200 1227" fill="currentColor" style="margin-top: 2px;">
+          <path d="M722.15 558.93L1155.26 0H1050.19L678.87 473.61L375.64 0H0L455.93 709.13L0 1227H105.07L500.51 727.03L824.36 1227H1200L722.15 558.93ZM554.24 655.43L511.7 592.65L153.09 94.44H332.79L625.79 538.4L668.33 601.18L1056.91 1132.56H877.21L554.24 655.43Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== Bio Content ===== -->
+  <section class="section bio">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="American Flag.jpeg" alt="American Flag" style="max-width: 250px; width: 100%; height: auto; display: inline-block;" />
+    </div>
+    <h2>Who I Am</h2>
+    <p>
+      My name is Carsen Van Camp. I come from Naples, FL, where I've lived most of my life. I attended the University of Florida, where I studied economics. After graduating in 2023, I backpacked through Europe for some time. The trip taught me that I love risk and the unknown, helped me mature, and gave me just a sliver of what the world has to offer. Now that I am back, I am eager to start building. I hope to eventually launch a successful company of my own, integrating my passions such as AI, transportation, and much more. Stay tuned—I will keep you updated on my journey right here! P.S. I also enjoy cooking, traveling, excersinig, biking, hiking, camping, hunting, fishing, dancing, reading, spending time with friends and family, attending sporting events and concerts,  and most importanly, chilling with my cat.
+    </p>
+
+    <h2>My Passions</h2>
+    <p>
+      I consider myself a polymath or generalist because I have a wide range of passions. My interests vary greatly, from building small AI models using reinforcement learning, to traveling across the globe, to diving into books on social contract theory, and even fishing by the lake. I find almost anything intriguing. However, to keep a long list short, three areas particularly stand out to me: AI/ML (robotics and autonomous systems are cool too), history, and geopolitics. I am committed to learning every single day and genuinely enjoy surrounding myself with people smarter than I am. If you ever want to share interesting ideas or information, please feel free to reach out!
+    </p>
+
+    <h2>My Why</h2>
+    <p style="margin-bottom: 0;">
+      I believe it is critical to have a clear ‘why’—something that excites you enough to wake up early in the morning and keeps you up late into the night. This passion isn’t something we discover until we start truly thinking for ourselves, which doesn’t happen by simply following and conforming to societal norms. That’s often why people experience midlife crises. Many go through life on autopilot because society has prescribed a certain path: go to college, get a job, start a family, save money, and eventually pass away. Before you know it, you’re 40 years old, stuck in a job you hate, married to someone you hardly know, and you’ve lost touch with who YOU really are.
+    </p>
+    <p>
+      You might ask what my ‘why’ is. I have a deep love and passion for my country, and I feel incredibly blessed to have been born in the United States of America. Starting a company is a personal dream, and living here has inspired me greatly because of the countless entrepreneurship success stories that capitalism has allowed our country and its people to experience. I want to pour my blood, sweat, and tears into ensuring that America remains at the forefront of innovation and technology. Additionally, I believe that giving your all to leave the world better for your children—and their children—is crucial for the survival and advancement of our species. That is my ‘why.’
+    </p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Carsen Van Camp. All rights reserved.
+  </footer>
+
+  <!-- Fixed Social Links (bottom-left) -->
+  <div style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
+    <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">X</a>
+    <a href="https://www.linkedin.com/in/carsen-van-camp-32a806225/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+</body>
+</html>

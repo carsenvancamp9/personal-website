@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- -----------------  INLINE CSS  ----------------- -->
+  <style>
+    /* ---------- CSS RESET ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ---------- ROOT VARIABLES ---------- */
+    :root {
+      --bg: #fcfcfc;
+      --text: #222;
+      --accent: #0c8;
+      --nav-bg: #ffffffee;
+      --nav-text: #222;
+      --nav-height: 56px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ---------- GLOBAL STYLES ---------- */
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background: var(--nav-bg);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+    .navbar nav {
+      display: flex;
+    }
+    .navbar nav a {
+      margin-right: 1rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--nav-text);
+      position: relative;
+      padding-bottom: 0.25rem;
+    }
+    .navbar nav a::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; background: var(--accent);
+      transition: width .3s ease;
+    }
+    .navbar nav a:hover::after { width: 100%; }
+
+    /* ---------- SECTIONS ---------- */
+    .section {
+      padding: calc(var(--nav-height) + 4rem) 1.25rem 4rem;
+      max-width: 800px; margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 { margin-bottom: 1rem; font-size: 2rem; }
+
+    /* Hero */
+    .hero-img { width: 200px; margin: 0 auto 1.5rem; }
+    #hero h1 { font-size: clamp(2rem, 8vw, 3rem); font-weight: 600; }
+    .subtitle { margin-top: .5rem; color: #555; }
+
+    /* Projects */
+    .project-list { list-style: none; text-align: left; margin-top: 1rem; }
+    .project-list li { margin-bottom: .75rem; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 0; font-size: .875rem; }
+
+    /* ---------- FADE-IN ANIMATION ---------- */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all .6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ---------- MEDIA QUERY ---------- */
+    @media (min-width: 768px) {
+      body { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>  
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="navbar">
+    <nav>
+      <a href="index.html#hero">Carsen Van Camp</a>
+      <a href="Bio.html">Bio</a>
+      <a href="Projects.html">Projects</a>
+      <a href="FavoriteKindsofMonkeys.html">Favorite Kinds of Monkeys</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+        <!-- X SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1200 1227" fill="currentColor" style="margin-top: 2px;">
+          <path d="M722.15 558.93L1155.26 0H1050.19L678.87 473.61L375.64 0H0L455.93 709.13L0 1227H105.07L500.51 727.03L824.36 1227H1200L722.15 558.93ZM554.24 655.43L511.7 592.65L153.09 94.44H332.79L625.79 538.4L668.33 601.18L1056.91 1132.56H877.21L554.24 655.43Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="hero" class="section">
+    <h1>Hello, I’m <span class="accent">Carsen Van Camp</span></h1>
+    <p class="subtitle">
+      Welcome to my personal website! Here you will find a little bit about me and what I enjoy doing. I hope you enjoy reading about my life, and I hope you learn something new.
+    </p>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <h2>Not Sure Where to Start?</h2>
+    <p>
+      Start exploring here:
+    </p>
+    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+      <li style="margin-bottom: 0.5rem;">
+        <a href="Bio.html">→ Learn about who I am</a>
+      </li>
+      <li style="margin-bottom: 0.5rem;">
+        <a href="Projects.html">→ Check out what I’m building</a>
+      </li>
+      <li>
+        <a href="FavoriteKindsofMonkeys.html">→ Discover my favorite monkeys</a>
+      </li>
+    </ul>
+  </section>
+
+  
+
+  <!-- ===== Favorite Quotes ===== -->
+  <section id="quotes" class="section">
+    <h2>Some Quotes I Like</h2>
+    <div id="quote-rotator" style="font-style: italic; margin-top: 1rem; min-height: 2.5em;"></div>
+  </section>
+
+  <!-- ===== Tools I Use ===== -->
+  <section id="tools" class="section">
+    <h2>Some Tools I Use</h2>
+    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="height: 48px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" style="height: 48px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" style="height: 48px;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/cb/Raspberry_Pi_Logo.svg" alt="Raspberry Pi" style="height: 48px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="height: 48px;">
+      <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px;">
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Carsen Van Camp. All rights reserved.
+  </footer>
+
+  <!-- Fixed Social Links (bottom-left) -->
+  <div style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
+    <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">X</a>
+    <a href="https://www.linkedin.com/in/carsen-van-camp-32a806225/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+<script>
+  const quotes = [
+    "The truly vindictive are as patient as saints",
+    "Don't lift the stone if you aren't ready for the snake",
+    "Wounds from a friend are better than a kiss from an enemy",
+    "Moves make moves",
+    "Loose lips sink ships",
+    "Your lips to God's ear",
+    "Only the paranoid survive"
+  ];
+
+  let currentQuote = 0;
+  const rotator = document.getElementById("quote-rotator");
+
+  function showNextQuote() {
+    rotator.style.opacity = 0;
+    setTimeout(() => {
+      rotator.textContent = quotes[currentQuote];
+      rotator.style.opacity = 1;
+      currentQuote = (currentQuote + 1) % quotes.length;
+    }, 500);
+  }
+
+  setInterval(showNextQuote, 4000);
+  window.addEventListener("load", showNextQuote);
+</script>
+</body>
+</html>

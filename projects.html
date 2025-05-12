@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Carsen Van Camp</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---------- CSS RESET ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ---------- ROOT VARIABLES ---------- */
+    :root {
+      --bg: #fcfcfc;
+      --text: #222;
+      --accent: #0c8;
+      --nav-bg: #ffffffee;
+      --nav-text: #222;
+      --nav-height: 56px;
+      font-size: 18px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ---------- GLOBAL STYLES ---------- */
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      position: sticky; top: 0; z-index: 100; height: var(--nav-height);
+      background: var(--nav-bg); backdrop-filter: blur(6px);
+      display: flex; align-items: center; padding: 0 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .navbar nav { display: flex; }
+    .navbar nav a {
+      margin-right: 1rem; font-weight: 500; font-size: 0.9rem;
+      color: var(--nav-text); position: relative; padding-bottom: 0.25rem;
+    }
+    .navbar nav a::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; background: var(--accent);
+      transition: width .3s ease;
+    }
+    .navbar nav a:hover::after { width: 100%; }
+
+    /* ---------- SECTIONS ---------- */
+    .section {
+      padding: calc(var(--nav-height) + 4rem) 1.25rem 4rem;
+      max-width: 800px; margin: 0 auto; text-align: center;
+      flex: 1;
+    }
+    .section h2 { margin-bottom: 1rem; font-size: 2rem; }
+
+    /* ---------- FOOTER ---------- */
+    footer { text-align: center; padding: 1rem 0; font-size: 0.875rem; margin-top: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="navbar">
+    <nav>
+      <a href="index.html#hero">Carsen Van Camp</a>
+      <a href="Bio.html">Bio</a>
+      <a href="projects.html">Projects</a>
+      <a href="FavoriteKindsofMonkeys.html">Favorite Kinds of Monkeys</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1200 1227" fill="currentColor" style="margin-top: 2px;">
+          <path d="M722.15 558.93L1155.26 0H1050.19L678.87 473.61L375.64 0H0L455.93 709.13L0 1227H105.07L500.51 727.03L824.36 1227H1200L722.15 558.93ZM554.24 655.43L511.7 592.65L153.09 94.44H332.79L625.79 538.4L668.33 601.18L1056.91 1132.56H877.21L554.24 655.43Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== Projects Content ===== -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div style="width: 100vw; position: relative; left: 50%; transform: translateX(-50%); padding: 0 1.25rem; box-sizing: border-box;">
+      <ol style="margin: 0; padding-left: 0; list-style-position: inside; text-align: left;">
+        <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+          <div style="flex: 1; text-align: left;">
+            1. One of the projects I’m working on is very risky but extremely fun. I’m in the process of starting a company focused on a new class of robotics that I call H.E.A.D. (Humanoid Electric Autonomous Drone). Essentially, this robot can transform between a humanoid mode and a drone mode. It’s a perfect solution for high-risk jobs such as telecommunications, rescue, or defense. To the right is a photo of a similar, though not identical, project developed at Caltech. I’ll be posting updates about this venture here!
+          </div>
+          <img src="H.E.A.D.jpeg" alt="H.E.A.D. project" style="width: 200px; height: auto; margin-left: 1rem; border-radius: 8px;" />
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+          <div style="flex: 1; text-align: left;">
+            2. Over the last few months, I’ve really enjoyed exploring FPV drones. I’m currently in the process of building one using foam board, along with components like a microcontroller, an electronic speed controller, and more. I’ve been inspired by a couple of YouTubers, <a href="https://www.youtube.com/@AeroStuffFPV" target="_blank" rel="noopener noreferrer">AeroStuff FPV</a> and <a href="https://www.youtube.com/@Project-Air" target="_blank" rel="noopener noreferrer">ProjectAir</a>. You can check out the code for this project and my other work on my <a href="https://github.com/carsenvancamp9" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          </div>
+          <img src="foam baord.jpeg" alt="FPV drone build" style="width: 200px; height: auto; margin-left: 1rem; border-radius: 8px;" />
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+          <div style="flex: 1; text-align: left;">
+            3. This past Christmas, I received a Raspberry Pi 5 and have been experimenting with it ever since. It’s incredibly cool, and I’m amazed by how small yet powerful this computer is. My goal is to use the Pi 5 as the central processor for the H.E.A.D. project I mentioned above. I’ve started programming on it and am currently learning how to make it function as the brain of a humanoid robot. Stay tuned for updates—exciting things are ahead!
+          </div>
+          <img src="IMG_0319.jpeg" alt="Raspberry Pi 5" style="width: 200px; height: auto; margin-left: 1rem; border-radius: 8px;" />
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Carsen Van Camp. All rights reserved.
+  </footer>
+
+  <!-- Fixed Social Links (bottom-left) -->
+  <div style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
+    <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">X</a>
+    <a href="https://www.linkedin.com/in/carsen-van-camp-32a806225/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+</body>
+</html>

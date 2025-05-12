@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite Kinds of Monkeys - Carsen Van Camp</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #fcfcfc;
+      --text: #222;
+      --accent: #0c8;
+      --nav-bg: #ffffffee;
+      --nav-text: #222;
+      --nav-height: 56px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background: var(--nav-bg);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar nav {
+      display: flex;
+    }
+
+    .navbar nav a {
+      margin-right: 1rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--nav-text);
+      position: relative;
+      padding-bottom: 0.25rem;
+    }
+
+    .navbar nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .navbar nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      padding: calc(var(--nav-height) + 1rem) 1.25rem 4rem;
+      width: 100%;
+      max-width: none;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.875rem;
+    }
+
+    .monkey-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3rem 0;
+      gap: 4rem;
+      flex-wrap: nowrap;
+      max-width: 100%;
+      width: 100%;
+      padding: 0 2rem;
+    }
+    .monkey-row img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      flex: 1 1 45%;
+      object-fit: cover;
+    }
+    .monkey-row:not([style*="row-reverse"]) img {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    .monkey-row[style*="row-reverse"] img {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .monkey-row .description {
+      flex: 1 1 45%;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="navbar">
+    <nav>
+      <a href="index.html#hero">Carsen Van Camp</a>
+      <a href="Bio.html">Bio</a>
+      <a href="Projects.html">Projects</a>
+      <a href="FavoriteKindsofMonkeys.html">Favorite Kinds of Monkeys</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1200 1227" fill="currentColor" style="margin-top: 2px;">
+          <path d="M722.15 558.93L1155.26 0H1050.19L678.87 473.61L375.64 0H0L455.93 709.13L0 1227H105.07L500.51 727.03L824.36 1227H1200L722.15 558.93ZM554.24 655.43L511.7 592.65L153.09 94.44H332.79L625.79 538.4L668.33 601.18L1056.91 1132.56H877.21L554.24 655.43Z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <section class="section">
+    <div style="font-size: 2rem; font-weight: 500; margin: 1.25rem auto; max-width: 900px;">
+      Primates Are F*cking Awesome. I Love How They Are Miniature Versions of Us Humans. Here Are a Few of My Favorites, I Hope You Enjoy!
+    </div>
+
+    <div class="monkey-row">
+      <img src="monkey1.jpg" alt="Monkey 1" />
+      <div class="description">
+        The proboscis monkey is a quirky primate found only on the island of Borneo in Southeast Asia, living in mangrove forests and along rivers. Known for their huge potbellies and excellent swimming skills, these monkeys are even born with webbed feet! But what really sets them apart is the male’s absurdly large, droopy nose. It looks completely ridiculous, and that’s exactly why I like them.
+      </div>
+    </div>
+    <div class="monkey-row" style="flex-direction: row-reverse;">
+      <img src="monkey2.jpg" alt="Monkey 2" />
+      <div class="description">
+        The white-faced saki is a small monkey from the rainforests of northern South America, especially in countries like Brazil, Venezuela, and Guyana. They spend most of their time high up in the trees, munching on fruits, seeds, and the occasional insect. Males have a white face that makes them look wise beyond their years—and honestly, they just seem super chill. I think pulling up to a party with one would be pretty cool.
+      </div>
+    </div>
+    <div class="monkey-row">
+      <img src="monkey3.jpg" alt="Monkey 3" />
+      <div class="description">
+        The emperor tamarin is a small primate native to the southwestern Amazon Basin, primarily in parts of Peru, Brazil, and Bolivia. It lives in tropical rainforests and is known for its agility in the treetops, where it feeds on fruits, insects, tree sap, and small animals. This species is easily recognized by the long, white facial hair found on both males and females. They look like they would whisper some solid advice softly in your ear.
+      </div>
+    </div>
+    <div class="monkey-row" style="flex-direction: row-reverse;">
+      <img src="monkey4.jpg" alt="Monkey 4" />
+      <div class="description">
+        The pygmy marmoset is the smallest monkey in the world, also native to the rainforests of the western Amazon Basin, including parts of Brazil, Colombia, Ecuador, Peru, and Bolivia. Weighing just around 100 grams, it lives high in the forest canopy and primarily feeds on tree sap, gum, and small insects. Despite its tiny size, it’s an agile and vocal primate. Imagine having this little thing running around your house...
+      </div>
+    </div>
+    <div class="monkey-row">
+      <img src="monkey5.jpg" alt="Monkey 5" />
+      <div class="description">
+        The black-and-white snub-nosed monkey is an endangered primate found in the mountainous forests of southwestern China, particularly in Yunnan, Sichuan, and Tibet. Adapted to cold, high-altitude environments, it lives in large social groups and feeds on lichens, leaves, fruits, and bark. Its most distinctive feature is its upturned, flat nose, which may help reduce frostbite. They honestly look like they got a little too much lip filler, but I honestly dig it.
+      </div>
+    </div>
+    <div class="monkey-row" style="flex-direction: row-reverse;">
+      <img src="monkey6.jpg" alt="Monkey 6" />
+      <div class="description">
+        The Japanese macaque, also known as the snow monkey (sounds better imo), is native to Japan and is the northernmost-living non-human primate. It inhabits a range of environments, from subtropical forests to snowy mountains, and is highly adaptable. These monkeys are known for their complex social behavior and famously soak in hot springs during winter to stay warm. Anyone want to join them in the hot springs?
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Carsen Van Camp. All rights reserved.
+  </footer>
+
+  <!-- Fixed Social Links (bottom-left) -->
+  <div style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
+    <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">X</a>
+    <a href="https://www.linkedin.com/in/carsen-van-camp-32a806225/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+</body>
+</html>
