@@ -90,3 +90,38 @@ h2 {
   height: 400px;
   z-index: 0;
 }
+# Mobile responsiveness
+@media screen and (max-width: 768px) {
+  .navbar nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: calc(var(--nav-height) + 2rem) 1rem 2rem;
+    max-width: 100%;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  .section.bio {
+    background-size: 150px auto, 150px auto, 150px auto;
+    background-position: left top, right center, left bottom;
+  }
+}
