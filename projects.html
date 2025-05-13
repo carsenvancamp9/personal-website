@@ -8,6 +8,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
+</head>
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -22,13 +23,13 @@
       --nav-bg: #ffffffee;
       --nav-text: #222;
       --nav-height: 56px;
-      font-size: 18px;
+      font-size: 16px;
       font-family: 'Inter', sans-serif;
     }
 
     /* ---------- GLOBAL STYLES ---------- */
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; }
     img { max-width: 100%; display: block; }
     a { color: var(--accent); text-decoration: none; }
 
@@ -41,8 +42,8 @@
     }
     .navbar nav { display: flex; }
     .navbar nav a {
-      margin-right: 1rem; font-weight: 500; font-size: 0.9rem;
-      color: var(--nav-text); position: relative; padding-bottom: 0.25rem;
+      margin-right: 1rem; font-weight: 500; font-size: .9rem;
+      color: var(--nav-text); position: relative; padding-bottom: .25rem;
     }
     .navbar nav a::after {
       content: ''; position: absolute; left: 0; bottom: 0;
@@ -50,17 +51,6 @@
       transition: width .3s ease;
     }
     .navbar nav a:hover::after { width: 100%; }
-
-    /* ---------- SECTIONS ---------- */
-    .section {
-      padding: calc(var(--nav-height) + 4rem) 1.25rem 4rem;
-      max-width: 800px; margin: 0 auto; text-align: center;
-      flex: 1;
-    }
-    .section h2 { margin-bottom: 1rem; font-size: 2rem; }
-
-    /* ---------- FOOTER ---------- */
-    footer { text-align: center; padding: 1rem 0; font-size: 0.875rem; margin-top: auto; }
   </style>
 </head>
 <body>
@@ -109,7 +99,7 @@
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer>
+  <footer style="text-align: center;">
     © 2025 Carsen Van Camp. All rights reserved.
   </footer>
 
