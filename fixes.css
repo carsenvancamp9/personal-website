@@ -1,0 +1,65 @@
+/* Shared corrections loaded after each page's original styles. */
+.navbar { height: auto; min-height: var(--nav-height); }
+.navbar nav { width: 100%; min-width: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .75rem 0; }
+.navbar nav a { width: auto; margin: 0; }
+.social-links { position: static !important; text-align: center; padding: 1rem; }
+#contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+#contact .contact-intro { position: static !important; min-width: 0; }
+#contact .contact-wrapper { min-width: 0; padding: 0; }
+.contact-form { width: 100%; }
+@media (max-width: 768px) {
+  .navbar { position: relative; }
+  #contact { grid-template-columns: minmax(0, 1fr); }
+  .monkey-row, .monkey-row[style] { flex-direction: column !important; gap: 1.5rem; padding: 0; }
+  .monkey-row img { max-width: 100%; flex: auto; }
+  #projects li { flex-direction: column; gap: 1rem; }
+  #projects li img { margin-left: 0 !important; max-width: 100%; }
+  .section.bio { background-image: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Phone layouts: readable content, comfortable targets, and no fixed overlays. */
+@media (max-width: 768px) {
+  .navbar { padding: 0 1rem; }
+  .navbar nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: .25rem .75rem;
+    overflow: visible;
+    justify-content: start;
+    position: relative;
+  }
+  .navbar nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .5rem 0;
+    font-size: .875rem;
+    line-height: 1.35;
+    text-align: left;
+    white-space: normal;
+  }
+  .navbar nav a:first-child { grid-column: 1 / -1; padding-right: 3rem; font-size: 1rem; font-weight: 600; }
+  .navbar nav a:last-child { position: absolute; right: 0; top: .75rem; width: 44px; justify-content: center; }
+  .section, .section.bio { padding: 2.5rem 1rem; }
+  .section p { padding: 0; font-size: 1rem; margin-bottom: 1.5rem; }
+  .section h2 { font-size: 1.6rem; }
+  #hero h1 { font-size: 2rem; line-height: 1.2; }
+  #projects li { margin-bottom: 2.5rem !important; }
+  #projects li img { width: 100% !important; max-width: 400px; align-self: center; }
+  .monkey-row { margin: 2rem 0; }
+  .monkey-row .description { font-size: 1rem; }
+  .monkey-row img { width: 100%; max-width: 400px; margin: 0 auto !important; }
+  #contact { gap: 2rem; }
+  #contact .contact-intro h1 { font-size: 1.75rem !important; line-height: 1.2; }
+  #contact .contact-intro img { display: block; margin: 1.5rem auto 0; }
+  .contact-form input, .contact-form textarea { font-size: 16px; }
+  .contact-form button { min-height: 48px; width: 100%; font-size: 1rem; }
+  #tools img { max-width: 120px; object-fit: contain; }
+  footer { padding: 1.5rem 1rem; }
+  .social-links a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+.contact-form label { display: block; text-align: left; font-size: .9rem; margin-bottom: .4rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #006b48; outline-offset: 3px; }

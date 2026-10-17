@@ -90,6 +90,7 @@
       resize: vertical;
     }
   </style>
+  <link rel="stylesheet" href="fixes.css" />
 </head>
 <body>
 
@@ -111,7 +112,7 @@
 
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="section">
-    <div style="position: absolute; left: 2rem; top: calc(var(--nav-height) + 3rem); max-width: 700px; text-align: left;">
+    <div class="contact-intro" style="position: absolute; left: 2rem; top: calc(var(--nav-height) + 3rem); max-width: 700px; text-align: left;">
       <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Get in Touch With Me</h1>
       <p style="font-size: 0.9rem; line-height: 1.6; max-width: 100%; white-space: normal;">
         Please reach out if you have any questions, want to connect, or just want to talk about cool shit.<br>
@@ -119,15 +120,19 @@
         Thank you for taking the time to get to know me a little bit more.<br>
         Now, please enjoy this picture of my cat, Gambian.
       </p>
-      <img src="gambian.jpeg" alt="My cat Gambian" style="margin-top: 1.5rem; max-width: 100%; width: 425px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+      <img src="Gambian.jpeg" alt="My cat Gambian" style="margin-top: 1.5rem; max-width: 100%; width: 425px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
     </div>
     <div class="contact-wrapper">
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="7c98f02d-c3d0-44a7-ac9d-1009e34a8f52" />
-        <input type="text" name="first-name" placeholder="First Name" required />
-        <input type="text" name="last-name" placeholder="Last Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" aria-label="First Name" placeholder="First Name" required />
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" aria-label="Last Name" placeholder="Last Name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" aria-label="Email" placeholder="Email" required />
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" aria-label="Your Message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit" style="padding: 0.75rem 1.5rem; background-color: var(--accent); color: white; border: none; cursor: pointer;">Submit</button>
         <p id="thank-you" style="display: none; margin-top: 1rem; color: green;">Thank you!</p>
       </form>
@@ -140,7 +145,7 @@
   </footer>
 
   <!-- Fixed Social Links (bottom-left) -->
-  <div style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
+  <div class="social-links" style="position: fixed; bottom: 1rem; left: 1rem; font-size: 1.1rem;">
     <a href="https://x.com/CarsenVancamp" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">X</a>
     <a href="https://www.linkedin.com/in/carsen-van-camp-32a806225/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </div>
